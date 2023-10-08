@@ -1,5 +1,5 @@
 # AWS Cognito (w/ Google) template
----
+
 #### About
 This template is for use with [AWS SAM CLI][1]. You will require a Google developer account to setup a Google OAuth. You will also require an AWS developer account which has sufficient access for SAM and the SAM CLI must be configured locally.
 
