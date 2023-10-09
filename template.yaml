@@ -9,15 +9,15 @@ Parameters:
   ClientDomains:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Description: Array of domains allowed for use by UserPool
-    Default: !Sub /${AWS::StackName}/ClientDomains
+    Default: /cognito-google/ClientDomains
   GoogleClientId:
     Type: AWS::SSM::Parameter::Value<String>
     Description: Google OAuth Client ID
-    Default: !Sub /${AWS::StackName}/GoogleClientId
+    Default: /cognito-google/GoogleClientId
   GoogleClientSecret:
     Type: AWS::SSM::Parameter::Value<String>
     Description: Google OAuth Client Secret
-    Default: !Sub /${AWS::StackName}/GoogleClientSecret
+    Default: /cognito-google/GoogleClientSecret
 
 Resources:
   UserPool:
