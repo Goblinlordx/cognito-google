@@ -11,7 +11,7 @@ on:
 
 env:
   SAM_TEMPLATE: template.yaml
-  TESTING_STACK_NAME: cognito-google-staging
+  TESTING_STACK_NAME: cgnto-google-staging
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-pi-PipelineExecutionRole-1CPAC5CDBPILW
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-CloudFormationExecutionR-V74RIH4EVPR9
   TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-stage-pipelin-artifactsbucket-ktwgzgkm0rwy
@@ -20,7 +20,7 @@ env:
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: ap-northeast-2
-  PROD_STACK_NAME: cognito-google
+  PROD_STACK_NAME: cgnto-google
   PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-1LTTYHMVZI4M4
   PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-9YG8ONUENJFL
   PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-prod-pipeline-artifactsbucket-35pn8ccuzky7
