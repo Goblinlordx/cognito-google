@@ -56,9 +56,6 @@ Resources:
         - email
         - openid
         - profile
-      Tags:
-        - Key: AppManagerCFNStackKey
-          Value: !Sub ${AWS::StackName}-UserPoolClient
 
   UserPoolGoogleIDP:
     Type: AWS::Cognito::UserPoolIdentityProvider
@@ -73,18 +70,12 @@ Resources:
         client_id: !Ref GoogleClientId
         client_secret: !Ref GoogleClientSecret
         authorize_scopes: email profile openid
-      Tags:
-        - Key: AppManagerCFNStackKey
-          Value: !Sub ${AWS::StackName}-UserPoolGoogleIDP
 
   UserPoolDomain:
     Type: AWS::Cognito::UserPoolDomain
     Properties:
       Domain: !Sub ${AWS::StackName}-${AWS::AccountId}
       UserPoolId: !Ref UserPool
-      Tags:
-        - Key: AppManagerCFNStackKey
-          Value: !Sub ${AWS::StackName}-UserPoolDomain
 
 Outputs:
   UserPoolId:
