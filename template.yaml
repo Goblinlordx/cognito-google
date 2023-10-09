@@ -7,17 +7,17 @@ Transform:
 
 Parameters:
   ClientDomains:
-    Type: AWS::SSM::Parameter::Value<List<String>>
+    Type: CommaDelimitedList
     Description: Array of domains allowed for use by UserPool
-    Default: /cognito-google/ClientDomains
+    Default: http://localhost:8080
   GoogleClientId:
-    Type: AWS::SSM::Parameter::Value<String>
+    Type: String
     Description: Google OAuth Client ID
-    Default: /cognito-google/GoogleClientId
+    Default: invalid
   GoogleClientSecret:
-    Type: AWS::SSM::Parameter::Value<String>
+    Type: String
     Description: Google OAuth Client Secret
-    Default: /cognito-google/GoogleClientSecret
+    Default: invalid
 
 Resources:
   UserPool:
