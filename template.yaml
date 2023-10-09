@@ -7,7 +7,7 @@ Transform:
 
 Parameters:
   ClientDomains:
-    Type: AWS::SSM::Parameter::Value<StringList>
+    Type: AWS::SSM::Parameter::Value<List<String>>
     Description: Array of domains allowed for use by UserPool
     Default: !Sub /${AWS::StackName}/ClientDomains
   GoogleClientId:
