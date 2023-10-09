@@ -7,17 +7,17 @@ Transform:
 
 Parameters:
   ClientDomains:
-    Type: CommaDelimitedList
+    Type: AWS::SSM::Parameter::Value<StringList>
     Description: Array of domains allowed for use by UserPool
-    Default: http://localhost:8080
+    Default: !Sub /${AWS::StackName}/ClientDomains
   GoogleClientId:
-    Type: String
+    Type: AWS::SSM::Parameter::Value<String>
     Description: Google OAuth Client ID
-    Default: invalid
+    Default: !Sub /${AWS::StackName}/GoogleClientId
   GoogleClientSecret:
-    Type: String
+    Type: AWS::SSM::Parameter::Value<String>
     Description: Google OAuth Client Secret
-    Default: invalid
+    Default: !Sub /${AWS::StackName}/GoogleClientSecret
 
 Resources:
   UserPool:
