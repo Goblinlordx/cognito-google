@@ -30,10 +30,15 @@ Resources:
       Schema:
         - AttributeDataType: String
           Name: email
-          Required: true
+          Mutable: true
+        - AttributeDataType: Boolean
+          Name: email_verified
+          Mutable: true
 
   UserPoolClient:
     Type: AWS::Cognito::UserPoolClient
+    DependsOn:
+      - UserPoolDomain
     Properties:
       UserPoolId: !Ref UserPool
       GenerateSecret: false
@@ -58,6 +63,7 @@ Resources:
       UserPoolId: !Ref UserPool
       AttributeMapping:
         email: email
+        email_verified: email_verified
       ProviderDetails:
         client_id: !Ref GoogleClientId
         client_secret: !Ref GoogleClientSecret
