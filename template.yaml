@@ -37,6 +37,8 @@ Resources:
 
   UserPoolClient:
     Type: AWS::Cognito::UserPoolClient
+    DependsOn:
+      - UserPoolDomain
     Properties:
       UserPoolId: !Ref UserPool
       GenerateSecret: false
