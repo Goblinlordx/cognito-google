@@ -30,7 +30,6 @@ Resources:
       Schema:
         - AttributeDataType: String
           Name: email
-          Required: true
           Mutable: true
 
   UserPoolClient:
