@@ -34,9 +34,8 @@ Resources:
         - AttributeDataType: Boolean
           Name: email_verified
           Mutable: true
-      Tags:
-        - Key: AppManagerCFNStackKey
-          Value: !Sub ${AWS::StackName}-UserPool
+      UserPoolTags:
+        AppManagerCFNStackKey: !Sub ${AWS::StackName}-UserPool
 
   UserPoolClient:
     Type: AWS::Cognito::UserPoolClient
