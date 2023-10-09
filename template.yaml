@@ -31,6 +31,9 @@ Resources:
         - AttributeDataType: String
           Name: email
           Mutable: true
+        - AttributeDataType: Boolean
+          Name: email_verified
+          Mutable: true
 
   UserPoolClient:
     Type: AWS::Cognito::UserPoolClient
@@ -58,6 +61,7 @@ Resources:
       UserPoolId: !Ref UserPool
       AttributeMapping:
         email: email
+        email_verified: email_verified
       ProviderDetails:
         client_id: !Ref GoogleClientId
         client_secret: !Ref GoogleClientSecret
