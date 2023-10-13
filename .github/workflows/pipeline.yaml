@@ -12,9 +12,12 @@ on:
 env:
   SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: cgnto-google-staging
-  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-pi-PipelineExecutionRole-1CPAC5CDBPILW
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-CloudFormationExecutionR-V74RIH4EVPR9
-  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-stage-pipelin-artifactsbucket-ktwgzgkm0rwy
+  # TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-pi-PipelineExecutionRole-1CPAC5CDBPILW
+  # TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::837930595040:role/aws-sam-cli-managed-stage-CloudFormationExecutionR-V74RIH4EVPR9
+  # TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-stage-pipelin-artifactsbucket-ktwgzgkm0rwy
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::837930595040:role/nyangi-ci-creds-PipelineExecutionRole-1I0XTUYKBZ23P
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::837930595040:role/nyangi-ci-creds-CloudFormationTrustRole-1QXLM0AQQKXRN
+  TESTING_ARTIFACTS_BUCKET: arn:aws:s3:::nyangi-ci-pipeline-artifacts
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
